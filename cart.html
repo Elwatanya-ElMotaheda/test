@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العربة - الوطنية المتحدة</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Arabic Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="cart.html">العربة</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <input type="text" id="searchBar" placeholder="ابحث عن منتجات..." />
+                <button id="cartButton">العربة (<span id="cartCount">0</span>)</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h2>عربة التسوق</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <button id="copyButton" class="copy-button">نسخ تفاصيل الطلب</button>
+            <!-- Embedded Google Form for Checkout -->
+            <iframe id="googleForm" src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">تحميل...</iframe>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 الوطنية المتحدة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

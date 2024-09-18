@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوطنية المتحدة</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Arabic Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="cart.html">العربة</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <input type="text" id="searchBar" placeholder="ابحث عن منتجات..." />
+                <button id="cartButton">العربة (<span id="cartCount">0</span>)</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero.jpg" alt="Hero Image" class="hero-image" />
+        <div class="hero-overlay">
+            <h2>مرحبًا بكم في الوطنية المتحدة</h2>
+            <p>أفضل المنتجات بأفضل الأسعار</p>
+            <a href="#productList" class="cta-button">اكتشف المزيد</a>
+        </div>
+    </section>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        <p>عرض خاص! احصل على خصم 20% على جميع المنتجات حتى نهاية الشهر.</p>
+    </div>
+
+    <!-- Main Product Listing -->
+    <main>
+        <div class="container">
+            <div id="productList" class="product-list">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 الوطنية المتحدة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
