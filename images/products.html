@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - الوطنية المتحدة جروب</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Main stylesheet linked -->
+    <link rel="stylesheet" href="responsive.css"> <!-- Responsive stylesheet linked -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">الوطنية المتحدة جروب</div>
+            <span class="toggle-icon" onclick="openNav()">&#9776;</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="products.html">المنتجات</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">تواصل معنا</a>
+                        <div class="dropdown-content">
+                            <a href="https://m.me/107394622435055">فيسبوك</a>
+                            <a href="https://wa.me/201018067085">واتساب</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidenav (without close button) -->
+    <div id="mySidenav" class="sidenav">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="https://m.me/107394622435055">فيسبوك</a>
+        <a href="https://wa.me/201018067085">واتساب</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="products-list">
+            <h1>منتجاتنا</h1>
+
+            <!-- Accessories Category -->
+            <div class="product-category">
+                <h2>الإكسسوارات</h2>
+                <div class="products-grid">
+                    <div class="product-card" onclick="window.location.href='مسامير.html'">
+                        <img src="مسامير.jpg" alt="مسامير وبرشام">
+                        <h3>مسامير وبرشام</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='إكسسوار الأبواب والشبابيك.html'">
+                        <img src="باب و شباك.jpg" alt="إكسسوار الأبواب والشبابيك">
+                        <h3>إكسسوار الأبواب والشبابيك</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='إكسسوار المطابخ.html'">
+                        <img src="مطبخ.jpg" alt="إكسسوار المطابخ">
+                        <h3>إكسسوار المطابخ</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='عجل.html'">
+                        <img src="عجل.jpg" alt="عجل قواعد">
+                        <h3>عجل قواعد</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='سلك.html'">
+                        <img src="سلك.jpg" alt="سلك ألومنيوم وفايبر">
+                        <h3>سلك ألومنيوم وفايبر</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='مانع أتربة - فرش و كاوتش.html'">
+                        <img src="فرش.jpg" alt="فرش و كاوتش">
+                        <h3>فرش و كاوتش</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='كوالين.html'">
+                        <img src="كالون.jpg" alt="كوالين">
+                        <h3>كوالين</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Aluminum Category -->
+            <div class="product-category">
+                <h2>الألومنيوم</h2>
+                <div class="products-grid">
+                     <div class="product-card" onclick="window.location.href='product.html?product=p7'">
+                        <img src="قطاعاتps.jpg" alt="قطاعات PS">
+                        <h3>قطاعات PS</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 الوطنية المتحدة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- Script for Sidenav -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        // Close sidenav when clicking outside
+        document.addEventListener('click', function(event) {
+            var sidenav = document.getElementById("mySidenav");
+            var toggle = document.querySelector(".toggle-icon");
+
+            // If the click is outside the sidenav and not on the toggle button, close it
+            if (!sidenav.contains(event.target) && event.target !== toggle && sidenav.style.width === "250px") {
+                closeNav();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* Responsive Styles */
+
+/* Only display the toggle icon on mobile devices */
+@media (max-width: 768px) {
+    /* Toggle Icon (Visible on Mobile) */
+    .toggle-icon {
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        margin-left: 20px;
+        display: block; /* Toggle icon visible on mobile screens */
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation menu on mobile */
+    }
+
+    /* Side Navigation (Sidenav) */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #343a40;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+}

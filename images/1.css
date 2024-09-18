@@ -1,0 +1,308 @@
+/* styles.css */
+
+/* CSS Variables for Theming */
+:root {
+    --primary-color: #f26522;
+    --secondary-color: #343a40;
+    --light-color: #f9f9f9;
+    --dark-color: #343a40;
+    --font-family: 'Cairo', sans-serif;
+    --transition-speed: 0.3s;
+    --card-width: 100%;
+    --card-height: auto;
+    --image-height: 250px;
+    --card-padding: 20px;
+    --card-margin: 15px;
+    --card-border-radius: 15px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--light-color);
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styles */
+.header-container {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.nav .nav-link:hover,
+.nav .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+.dropdown-toggle::after {
+    margin-right: 0.5rem;
+}
+
+/* Side Navigation Styles */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding-top: 60px;
+    z-index: 1050;
+}
+
+.sidenav a {
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    color: #818181;
+    display: block;
+    transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.sidenav a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('الواح فيبر سالوميل.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 120px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.hero button:hover {
+    background-color: #d4541d;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll Down Arrow */
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down-arrow i {
+    color: #fff;
+}
+
+.scroll-down-arrow:hover {
+    color: var(--primary-color);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+/* Products Overview */
+.products-overview {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.products-overview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+/* Product Card Styles */
+.product-card {
+    cursor: pointer;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    width: var(--card-width);
+    height: var(--card-height);
+    margin: var(--card-margin);
+    padding: var(--card-padding);
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: var(--image-height);
+    object-fit: cover;
+    border-radius: var(--card-border-radius);
+    transition: transform var(--transition-speed);
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h5 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .product-card {
+        width: calc(25% - 30px);
+    }
+}
+
+@media (max-width: 992px) {
+    .product-card {
+        width: calc(33.333% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 30px);
+    }
+
+    .hero {
+        padding: 100px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .products-overview h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .scroll-down-arrow {
+        font-size: 2rem;
+    }
+}

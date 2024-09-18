@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - الوطنية المتحدة جروب</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Main stylesheet -->
+    <link rel="stylesheet" href="responsive.css"> <!-- Responsive stylesheet -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">الوطنية المتحدة جروب</div>
+            <span class="toggle-icon" onclick="openNav()">&#9776;</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="products.html">المنتجات</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">تواصل معنا</a>
+                        <div class="dropdown-content">
+                            <a href="https://m.me/107394622435055">فيسبوك</a>
+                            <a href="https://wa.me/201018067085">واتساب</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidenav -->
+    <div id="mySidenav" class="sidenav">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="https://m.me/107394622435055">فيسبوك</a>
+        <a href="https://wa.me/201018067085">واتساب</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="products-list">
+            <h1>منتجاتنا</h1>
+
+            <div class="product-category">
+                <div class="products-grid">
+                    <div class="product-card" onclick="window.location.href='product.html?product=p1'">
+                        <img src="عجل سلك معدن.jpg" alt="عجل سلك معدن">
+                        <h3>عجل سلك معدن</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='product.html?product=p2'">
+                        <img src="عجل زجاج.jpg" alt="عجل زجاج">
+                        <h3>عجل زجاج</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='product.html?product=p3'">
+                        <img src="عجل ps.jpg" alt="عجل ps">
+                        <h3>عجل ps</h3>
+                    </div>
+                    <div class="product-card" onclick="window.location.href='product.html?product=p4'">
+                        <img src="عجل ثلاجة بفرامل و بدون.jpg" alt="عجل ثلاجة بفرامل و بدون">
+                        <h3>عجل ثلاجة بفرامل و بدون</h3>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 الوطنية المتحدة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- Script for Sidenav -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        document.addEventListener('click', function(event) {
+            var sidenav = document.getElementById("mySidenav");
+            var toggle = document.querySelector(".toggle-icon");
+
+            if (!sidenav.contains(event.target) && event.target !== toggle && sidenav.style.width === "250px") {
+                closeNav();
+            }
+        });
+    </script>
+
+    <script src="products.js"></script>
+</body>
+</html>

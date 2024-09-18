@@ -1,0 +1,117 @@
+/* responsive.css */
+
+/* Product Detail Page */
+@media (max-width: 1200px) {
+    .image-gallery {
+        max-width: 60%;
+    }
+
+    .details {
+        max-width: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    .image-gallery {
+        max-width: 100%;
+    }
+
+    .details {
+        max-width: 100%;
+    }
+
+    .product-detail {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .carousel-inner img {
+        height: 350px;
+    }
+
+    .details h1 {
+        font-size: 2.2rem;
+    }
+
+    .details .price {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust Tabs */
+    .nav-tabs .nav-link {
+        font-size: 0.95rem;
+        padding: 8px 10px;
+    }
+
+    .nav-tabs .nav-link.active {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-inner img {
+        height: 250px;
+    }
+
+    .details h1 {
+        font-size: 1.8rem;
+    }
+
+    .details .price {
+        font-size: 1.3rem;
+    }
+
+    .details .description {
+        font-size: 0.95rem;
+    }
+
+    .details .add-to-cart {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-inner img {
+        height: 200px;
+    }
+
+    .details h1 {
+        font-size: 1.6rem;
+    }
+
+    .details .price {
+        font-size: 1.1rem;
+    }
+
+    .details .description {
+        font-size: 0.9rem;
+    }
+
+    .details .add-to-cart {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust Header Elements on Very Small Screens */
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav .nav-link {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .sidenav a {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+    }
+
+    .carousel-indicators button {
+        width: 12px;
+        height: 12px;
+    }
+}

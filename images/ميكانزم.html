@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> المنتجات - الوطنية المتحدة جروب</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">الوطنية المتحدة جروب</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+	            <li><a href="products.html">المنتجات</a></li>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">تواصل معنا</a>
+                        <div class="dropdown-content">
+                            <a href="https://m.me/107394622435055">فيسبوك</a>
+                            <a href="https://wa.me/201018067085">واتساب</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section class="products-list">
+            <h1>منتجاتنا</h1>
+    <div class="product-category">
+        <div class="products-grid">
+<div class="product-card" onclick="window.location.href='product.html?product=p5'">
+    <img src="الواح فيبر سالوميل.jpg" alt="الواح فيبر سالوميل">
+    <h3>الواح فيبر سالوميل</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p16'">
+    <img src="سبت الوان.jpg" alt="سبت الوان">
+    <h3>سبت الوان</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p6'">
+    <img src="الواح فيبر اشكال طبيعية.jpg" alt="الواح فيبر اشكال طبيعية">
+    <h3>الواح فيبر اشكال طبيعية</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p17'">
+    <img src="سيلكون.jpg" alt="سيلكون">
+    <h3>سيلكون</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p18'">
+    <img src="صفاية.jpg" alt="صفاية مقاسات">
+    <h3>صفاية مقاسات</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p19'">
+    <img src="فوم.jpg" alt="فوم">
+    <h3>فوم</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p20'">
+    <img src="كورنر بلاستيك.jpg" alt="كورنر بلاستيك">
+    <h3>كورنر بلاستيك</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p25'">
+    <img src="كورنر ميني.jpg" alt="كورنر ميني">
+    <h3>كورنر ميني</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p21'">
+    <img src="كونكتور.jpg" alt="كونكتور">
+    <h3>كونكتور الوان</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p22'">
+    <img src="مفصلة ايطالي.jpg" alt="مفصلة ايطالي">
+    <h3>مفصلة ايطالي</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p23'">
+    <img src="مفصلة سوستة.jpg" alt="مفصلة سوستة">
+    <h3>مفصلة سوستة</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p32'">
+    <img src="مفصلة 35.jpg" alt="مفصلة 35">
+    <h3>مفصلة 35</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p39'">
+    <img src="مقبض ماسورة فضي.jpg" alt="مقبض ماسورة فضي">
+    <h3>مقبض ماسورة فضي</h3>
+</div>
+<div class="product-card" onclick="window.location.href='product.html?product=p40'">
+    <img src="مقبض ماسورة اسود.jpg" alt="مقبض ماسورة اسود">
+    <h3>مقبض ماسورة اسود</h3>
+</div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 الوطنية المتحدة. جميع الحقوق محفوظة.</p>
+    </footer>
+<script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const toggle = document.createElement('button');
+                toggle.className = 'dropdown-toggle';
+                toggle.textContent = dropdown.querySelector('.dropbtn').textContent;
+
+                dropdown.insertBefore(toggle, dropdown.querySelector('.dropbtn'));
+                dropdown.querySelector('.dropbtn').style.display = 'none';
+
+                toggle.onclick = function() {
+                    dropdown.classList.toggle('active');
+                };
+            });
+
+            document.onclick = function(event) {
+                if (!event.target.matches('.dropdown-toggle')) {
+                    dropdowns.forEach(drop => {
+                        if (drop.classList.contains('active')) {
+                            drop.classList.remove('active');
+                        }
+                    });
+                }
+            };
+        });
+    </script>
+
+    <script src="products.js"></script>
+</body>
+</html>
